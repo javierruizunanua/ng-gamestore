@@ -1,0 +1,27 @@
+<figure class="figure">
+    <img src="{{ game.imagen}}" class="figure-img img-fluid rounded">
+    <figcaption class="figure-caption">
+      <h4>Nombre: {{game.nombre}}</h4>
+      <h5>Precio: {{game.precio | currency}}</h5>
+      <h5>Descripción: {{game.descripcion}}</h5>
+      <h5>Valoración: {{game.valoracion}}</h5>
+      <h5>Fecha de Salida: {{game.valoracion}}</h5>
+      <h5>Categorías: {{game.categorias}}</h5>
+      <h5>Empresa: {{game.empresa}}</h5>
+    </figcaption>
+  </figure>
+  
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <button class="btn btn-outline-secondary mr-3"
+              style="width:80px"
+              (click)="onBack()">
+        <i class="fa fa-chevron-left"></i> Back
+      </button>
+      <button class="btn btn-outline-primary"
+              style="width:80px"
+              (click)="goEdit()">
+        Edit
+      </button>
+    </div>
+  </div>

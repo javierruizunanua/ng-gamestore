@@ -1,0 +1,8 @@
+<figure class="figure">
+    <img src="{{game.imagen}}" class="figure-img img-fluid rounded">
+    <figcaption class="figure-caption">
+      <h5><a [routerLink]="['/games', game.id]">{{game.nombre}}</a></h5>
+      <h6>{{game.precio | currency}}</h6>
+      <p>{{game.descripcion}}</p>
+    </figcaption>
+  </figure>

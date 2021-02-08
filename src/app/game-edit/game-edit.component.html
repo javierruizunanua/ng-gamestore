@@ -1,0 +1,144 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="saveGame()"
+            [formGroup]="gameForm">
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="gameNombreId">Nombre:</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="gameNombreId"
+                   type="text"
+                   placeholder="Nombre (requerido)"
+                   formControlName="nombre"
+                   name="nombre" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="valoracionId">Valoración (1-10):</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="valoracionId"
+                   type="text"
+                   placeholder="Valoración (1-10)"
+                   formControlName="valoracion"
+                   name="valoracion" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="descripcionId">Descripción:</label>
+  
+          <div class="col-md-8">
+            <textarea class="form-control"
+                      id="descripcionId"
+                      placeholder="Descripción"
+                      rows=3
+                      formControlName="descripcion"
+                      name="descripcion"></textarea>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="empresaId">Empresa:</label>
+  
+          <div class="col-md-8">
+            <label class="form-control"
+                      id="empresaId"
+                      placeholder="Nombre de la empresa"
+                      rows=3
+                      formControlName="empresa"
+                      name="empresa"></label>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="precioId">Precio:</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="precioId"
+                      placeholder="Precio"
+                      formControlName="precio"
+                      name="precio" />
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label for="fechadesalidaId" class="col-md-2 col-form-label">Fecha de salida:</label>
+
+            <div class="col-md-8">
+                <input class="form-control"
+                        type="date"
+                        id="fechadesalidaId"
+                        placeholder="Fecha de salida"
+                        formControlName="fechadesalida"
+                        name="fechadesalida" />
+              </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="categoriasId">Categorías:</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="categoriasId"
+                      placeholder="Categorías"
+                      formControlName="categorias"
+                      name="categorias" />
+          </div>
+        </div>
+  
+      <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="imagenId">Imagen:</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="imagenId"
+                      placeholder="Imagen"
+                      formControlName="imagen"
+                      name="imagen" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <div class="offset-md-2 col-md-4">
+            <button class="btn btn-primary mr-3"                    
+                    type="submit">
+              Save
+            </button>
+            <button class="btn btn-outline-secondary mr-3"                    
+                    type="button"
+                    title="Cancel your edits"
+                    [routerLink]="['']">
+              Cancel
+            </button>
+            <button class="btn btn-outline-warning"                  
+                    type="button"
+                    title="Delete this game"
+                    (click)="deleteGame()">
+              Delete
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <div class="alert alert-danger"
+         *ngIf="errorMessage">{{errorMessage}}
+    </div>
+  </div>
