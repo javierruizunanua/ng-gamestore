@@ -12,22 +12,28 @@ class Game {
     public fechadesalida: Date,
     public categorias: string[],
     public empresa: string,
-    public imagen: ''
+    public imagen: string
   ) { }
 }
 
+var d0 = new Date("2020-03-25");
+var d1 = new Date("2017-11-2");
+var d2 = new Date("2019-03-21");
+var d3 = new Date("2019-12-15");
+var d4 = new Date("2019-05-15");
 
 const games: Game[] = [
+  
   new Game(
     0,
     "Fifa 20",
     "Un juego de fútbol que te quita el alma",
     40,
     7.3,
-    '2/7/2020',
+    d0,
     ["deporte"],
     "EA Sports",
-    "../assets/images/fifa20.jpg"
+    "../assets/images/fifa20.jpg",
   ),
   new Game(
     1,
@@ -35,7 +41,7 @@ const games: Game[] = [
     "Un juego de mundo abierto lleno de demonios que te quita el alma",
     45,
     8.7,
-    '2/11/2017',
+    d1,
     ["fantasía", "acción"],
     "Nokushima",
     "../assets/images/darksouls3.jpg"
@@ -46,7 +52,7 @@ const games: Game[] = [
     "Un juego de mundo abierto en un lugar de Estados Unidos donde una secta crea terror",
     35,
     7.6,
-    '21/3/2019',
+    d2,
     ["acción"],
     "Ubisoft",
     "../assets/images/farcry5.jpg"
@@ -57,7 +63,7 @@ const games: Game[] = [
     "Un juego de mundo abierto en la época del lejano oeste",
     60,
     9.5,
-    '15/12/2019',
+    d3,
     ["rpg", "acción"],
     "Nauty Dogs",
     "../assets/images/reddeadredemption2.jpg"
@@ -68,13 +74,12 @@ const games: Game[] = [
     "Un juego de mundo abierto en una época greca a.C. cuyo personaje es un mercenario/a",
     35,
     8.3,
-    '15/5/2019',
+    d4,
     ["rpg", "acción", "aventura"],
     "Ubisoft",
     "../assets/images/assassinscreedodyssey.jpg"
   )
 ]
-
 
 
 function getGames(): any[] {
